@@ -1,0 +1,6 @@
+# 기본 방어선
+node_modules/
+dist/
+build/
+public/
+.vscode/

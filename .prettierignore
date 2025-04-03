@@ -1,0 +1,8 @@
+# 포맷 제외 폴더
+public/
+dist/
+build/
+node_modules/
+.vscode/
+
+src/index.css
