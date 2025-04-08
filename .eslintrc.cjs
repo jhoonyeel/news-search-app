@@ -14,7 +14,25 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    'import/order': 'warn', // ✅ optional: import 순서 정리
+    // ✅ optional: import 순서 정리
+    'import/order': [
+      'warn',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'internal',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
     'import/no-unresolved': 'error', // ✅ alias 인식 안 되면 잡아냄
     'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }], // ✅ React 컴포넌트만 화살표 함수 강제
   },

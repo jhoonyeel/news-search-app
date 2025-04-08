@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 /* Tailwind Core */
-@tailwind base;
-@tailwind components;
+@import "tailwindcss/preflight"; /* 브라우저 기본 스타일 초기화 (기존 base 역할) */
 @tailwind utilities;
 
 /* ========= Custom Global Styles (글로벌 보완용 스타일)========== */
