@@ -1,7 +1,11 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".", // 상대 경로 기준점 (보통 생략하면 오류 남)
+    "paths": {
+      "@/*": ["src/*"], // 👉 @ → src/에 정확히 매핑
+      "@types/*": ["src/types/*"] // 예: import { X } from '@types/news'
+    }
+  },
   "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
 }
