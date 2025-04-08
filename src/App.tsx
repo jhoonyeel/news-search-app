@@ -5,8 +5,8 @@ import ArticleCard from './ArticleCard';
 import { NewsArticle } from './types/news';
 
 const fetchNews = async (keyword: string): Promise<NewsArticle[]> => {
-  const apiKey = import.meta.env.VITE_NEWS_API_KEY;
-  const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(keyword)}&apikey=${apiKey}`;
+  const baseURL = import.meta.env.VITE_API_BASE_URL;
+  const url = `${baseURL}/news?q=${encodeURIComponent(keyword)}`;
 
   const res = await fetch(url);
   if (!res.ok) throw new Error('뉴스 데이터 요청 실패');
